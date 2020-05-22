@@ -1,0 +1,1691 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Montserrat, sans-serif;
+}
+
+:root {
+    --color: #ff3b30;
+    --shadow: 0 1px 3px rgba(0,0,0,.1);
+    --border: #e9e9e9;
+    --dark: #0b1726;
+}
+ 
+.grid {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+}
+.xgrid {
+    padding: 50px 0px;
+}
+.clear {
+    clear: left;
+}
+
+h1,h2,h3,h4,h5,h6, i, p,li,button, a, span {
+    position: relative;
+}
+img {
+    object-fit: cover;
+}
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+a:hover {
+    text-decoration: underline;
+}
+input, textarea {
+    outline: none;
+}
+
+::selection {
+    background: none;
+    color: var(--color);
+}
+::-webkit-scrollbar {
+    width: 13px;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(120%);
+}
+.section {
+    position: relative;
+}
+.spacer {
+    height: 50px;
+}
+.spacerl {
+    height: 100px;
+}
+
+
+
+.app {
+    position: relative;
+    width: 700px;
+    height: 100vh;
+    box-shadow: 0 1px 13px rgba(0,0,0,.1);
+    margin: auto;
+    border-radius: 10px;
+    background: #fafafa;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border);
+    background: #f6f6f6;
+    z-index: 999;
+    transition: all 0.4s;
+}
+.logo {
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+    z-index: 10;
+    float: left;
+} 
+nav .digital-clock {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    top: 18px;
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+.notifbtn {
+    position: relative;
+    top: 7px;
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.notifbtn:hover {
+    background: #f1f1f1; 
+}
+nav h4 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    color: #333;
+    transition: all 0.3s;
+}
+.settings {
+    position: relative;
+    top: 5px;
+    padding: 10px;
+    float: right;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.account {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #f1f1f1;
+    float: right;
+    top: 10px;
+    margin: auto 10px;
+    cursor: pointer;
+}
+.account img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.settings:hover {
+    color: var(--color);
+}
+.settingsbox {
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    z-index: 998;
+    transition: all 0.4s;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+}     
+.profpic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(images/prof.png);
+    background: #e1e1e1;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.profpic i {
+    position: absolute;
+    font-size: 20px;
+    color: #555;
+    right: -5px;
+    bottom: 7px;
+    border-radius: 100%;
+    padding: 7px;
+    background: #e9e9e9;
+    z-index: 20;
+}
+.profile h4 {
+    font-size: 24px;
+    color: #555;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    z-index: 1;
+    outline: pink;
+    text-align: center;
+    cursor: pointer;
+}
+.profile small {
+    position: relative;
+    width: 100px;
+    display: none;
+    margin: 5px auto;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 20;
+}
+.profile p {
+    font-size: 14px;
+    margin: auto;
+    top: -45px;
+    transition: all 0.7s;
+}
+.profile p::before {
+    position: relative;
+    content: "•";
+    color: lawngreen;
+    font-size: 60px;
+    top: 12px;
+}
+.options {
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    transition: all 0.3s;
+}
+.optbox {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.optbox:hover {
+    background: #f1f1f1;
+}
+.optbox h6 {
+    font-size: 15px;
+    margin: auto;
+    color: #555;
+    font-weight: 500;
+    float: left;
+    top: 7px;
+    cursor: auto;
+} 
+.optbox small {
+    display: block;
+}
+.optclick {
+    position: relative;
+    height: 30px;
+    padding: 20px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.inneroptclick hr {
+    position: relative;
+    border: none;
+    background: #d9d9d9;
+    height: 1px;
+    width: 70%;
+}
+.inneroptclick, .colorscont {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-y: scroll;
+    cursor: default;
+}
+.colorscont .colors {
+    position: relative;
+    top: auto;
+    overflow-y: visible;
+    padding: 0 20px;
+}
+.colors div {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin: 15px;
+    display: inline-block;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+} 
+.applygrad {
+    position: relative;
+    padding: 8px;
+    float: right;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+    z-index: 100;
+    color: #555;
+} 
+.applygrad:hover {
+    background: var(--color);
+    color: white;
+}
+/*bg colors */
+.color0{background:#fafafa}
+.color1{background:linear-gradient(180deg,#fbf004 0,#2acd00 100%)}
+.color2{background:linear-gradient(180deg,#04bcfb 0,#9000ff 100%)}
+.color3{background:linear-gradient(180deg,#04bcfb 0,#00ffc4 100%)}
+.color4{background:linear-gradient(180deg,#fb0479 0,#ffeb00 100%)}
+.color5{background:linear-gradient(0deg,#22c1c3 0,#fdbb2d 100%)}
+/*theme colors */
+.tcolor0 {background: #ff3b30;}
+.tcolor1 {background: #7a38ff;}
+.tcolor2 {background: #00dfeb;}
+.tcolor3 {background: #ffca0a;}
+.tcolor4 {background: #ff0077;}
+.tcolor5 {background: #436175;}
+.tcolor6 {background: #52eb00;}
+.tcolor7 {background: #556326;}
+.tcolor8 {background: #000000;} 
+ 
+.colors {
+    margin-top: 20px;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+.reactions small {
+    position: relative;
+    display: block;
+    margin-top: 15px;
+}
+.reactions i {
+    margin: 15px 12px;
+    transition: all 0.3s;
+    font-size: 25px;
+    cursor: pointer;
+} 
+.fa-palette {
+    background: -webkit-linear-gradient(319deg, rgba(234,36,255,1) 0%, rgba(122,56,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-laugh-squint,.fa-smile,.fa-surprise,.fa-grin-tongue {
+    background: -webkit-linear-gradient(319deg, rgba(255,164,36,1) 0%, rgba(255,218,25,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-grin-hearts,.fa-kiss-wink-heart {
+    background: linear-gradient(165deg, rgba(255,203,11,1) 0%, rgba(255,203,11,1) 32%, rgba(255,0,27,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-heart {
+    background: -webkit-linear-gradient(319deg, rgba(255,76,36,1) 0%, rgba(255,25,49,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-angry {
+    background: linear-gradient(319deg, rgba(255,127,0,1) 0%, rgba(208,0,29,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-paw {
+    background: -webkit-linear-gradient(319deg, rgba(234,36,255,1) 0%, rgba(122,56,255,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-dragon {
+    background: -webkit-linear-gradient(319deg, rgba(255,183,26,1) 0%, rgba(255,38,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-dog {
+    background: linear-gradient(165deg, rgba(40,28,13,1) 0%, rgba(119,92,50,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-cat {
+    background: linear-gradient(165deg, rgba(219,124,0,1) 0%, rgba(119,92,50,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}  
+.optbox .fa-music, .contgen .fa-music, .typebox .fa-music{
+    background: -webkit-linear-gradient(347deg, rgba(255,115,34,1) 0%, rgba(208,0,172,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+} 
+.fa-sad-tear {
+    background: linear-gradient(180deg, rgba(255,203,11,1) 0%, rgba(193,190,120,1) 57%, rgba(0,185,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-fish {
+    background: linear-gradient(326deg, rgba(255,147,5,1) 0%, rgba(255,235,8,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-cloud-sun {
+    background: linear-gradient(184deg, rgba(255,147,5,1) 0%, rgba(255,204,18,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.optbox .fa-bell {
+    background: linear-gradient(135deg, rgba(216,255,5,1) 0%, rgba(0,162,251,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.optclick .fa-user-alt {
+    background: linear-gradient(15deg, rgba(5,128,255,1) 0%, rgba(18,230,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typebox .fa-dragon,.typebox .fa-fish {
+    top: -50px;
+}
+ 
+.opticon {
+    float: right;
+    top: 0px;
+    color: #555;
+    font-size: 22px;
+    padding: 5px;
+}
+.setbox {
+    position: relative;
+    margin-bottom: 40px;
+}
+.setbox h4 {
+    text-align: left;
+    color: #555;
+    font-size: 20px;
+}
+.changeprofpic {
+    position: relative;
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: none;
+}
+.changeprofpic span {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    box-sizing: border-box;
+} 
+.changeprofpic span:hover {
+    background: var(--color);
+    color: white;
+}
+.changeprofpic input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.changeprofpic span i {
+    font-style: normal;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.profileinfo div, .weathersettings div, .notifsettings div  {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+}
+.weathersettings div, .notifsettings div {
+    height: 30px;
+}
+.profileinfo h6, .weathersettings h6 {
+    float: left;
+    color: #555;
+    font-size: 16px;
+}
+.weathersettings label, .notifsettings label {
+    float: right;
+}
+.weathersettings span {
+    float: right;
+    font-size: 13px;
+    top: 12px;
+}
+.addweatherdiv > div {
+    margin-left: 50px;
+}
+input[type="radio"] {
+    margin: auto 10px;
+    width: 20px;
+    height: 20px;
+}
+.notifsettings small {
+    padding: 5px 10px;
+    float: left;
+    font-size: 13px;
+    border-radius: 10px;
+    color: #555;
+    margin-right: 20px;
+    margin-left: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.notifsettings small:hover {
+    background: var(--color);
+    color: #fff;
+}
+.profileinfo i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.profileinfo input, .weathersettings input{
+    position: relative;
+    float: right;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #333;
+}
+.profileinfo input::placeholder, .weathersettings input::placeholder  {
+    color: #aaa;
+}
+.profileinfo small {
+    position: relative;
+    color: #555;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    float: left;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.profileinfo small:hover {
+    background: var(--color);
+    color: #fff;
+}
+.scrollable {
+    position: absolute;
+    top: 120px;
+    right: 5px;
+    color: var(--color);
+    font-size: 20px;
+    
+}
+.bounce-top {
+    animation: bounce-top 3s infinite both;
+}
+@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
+
+.setdiv {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    text-align: left;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+.setdivadmin input {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    transition: visibility 0.3s, left 0.5s;
+    border: none;
+    padding: 10px;
+    top:-7px;
+    left: 30px;
+    background: none;
+    visibility: hidden;
+} 
+.adminbtn {
+    position: relative;
+    z-index: 10;
+} 
+.setdivadmin small {
+    color: var(--color);
+    margin-left: 50px;
+    font-size: 12px;
+    display: none;
+}
+
+.setdiv h6 {
+    font-size: 15px;
+    margin: auto;
+    color: #555;
+    font-weight: 500;
+    float: left;
+} 
+.setdiv label {
+    position: relative;
+    float: right;
+    top: -2px;
+}
+.setdiv i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.setdiv span {
+    position: relative;
+    float: right;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    font-size: 14px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.setdiv span:hover {
+    background: var(--color);
+    color: white;
+}
+.poweroff {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.poweroff:hover {
+    background: #f1f1f1;
+}
+.closedapp {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}  
+.closedapp:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+}
+.closedapp img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
+/* iOS Style Button */
+.form-switch{display:inline-block;cursor:pointer;-webkit-tap-highlight-color:transparent}.form-switch i{position:relative;display:inline-block;margin-right:.5rem;width:46px;height:26px;background-color:#e6e6e6;border-radius:23px;vertical-align:text-bottom;transition:all .3s linear}.form-switch i::before{content:"";position:absolute;left:0;width:42px;height:22px;background-color:#fff;border-radius:11px;transform:translate3d(2px,2px,0) scale3d(1,1,1);transition:all .25s linear}.form-switch i::after{content:"";position:absolute;left:0;width:22px;height:22px;background-color:#fff;border-radius:11px;box-shadow:0 2px 2px rgba(0,0,0,.24);transform:translate3d(2px,2px,0);transition:all .2s ease-in-out}
+.form-switch:active i::after{width:28px;transform:translate3d(2px,2px,0)}.form-switch:active input:checked+i::after{transform:translate3d(16px,2px,0)}.form-switch input{display:none}.form-switch input:checked+i{background-color:var(--color)}.form-switch input:checked+i::before{transform:translate3d(18px,2px,0) scale3d(0,0,0)}.form-switch input:checked+i::after{transform:translate3d(22px,2px,0)}
+
+
+
+
+
+
+
+
+/* Container Styles */
+.container {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    padding: 20px 10px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.typebox {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    padding: 20px;
+    background: #fafafa;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    overflow: scroll;
+    transition: all 0.3s;
+}
+.tools {
+    position: relative;
+    top: 6px;
+    width: 140px;
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}  
+.toolsbox {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    font-size: 20px;
+    color: var(--color);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.toolsbox:hover {
+    background: #f1f1f1;
+}
+.mobtoolsdiv {
+    display: none;
+}
+#getval {
+    visibility: hidden;
+    display: none;
+} 
+.custom-file-upload {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+}
+.clock {
+    position: absolute;
+    top: 90px;
+    width: 300px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.clockcont {
+    position: relative;
+    float: right;
+    width: 100%;
+}
+.clockcont img {
+    float: right;
+} 
+.upimgright {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.clockleft {
+    float: left;
+}
+.upimgleft {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}  
+.clockleft img {
+    float: left;
+} 
+ 
+.messengerbox {
+    width: 450px;
+    float: left;
+    transition: all 0.3s;
+}  
+.messenger {
+    position: relative;
+    border: none;
+    float: left;
+    background: #f1f1f1;
+    padding: 15px 20px;
+    height: 50px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 40px;
+    color: #555;
+    font-size: 15px;
+    transition: all 0.4s;
+    resize: none;
+}
+.messenger:focus, .messenger:hover {
+    background: #eaeaea;
+}
+.messenger::placeholder {
+    color: #777;
+}
+.sendbtn {
+    position: relative;
+    float: left;
+    padding: 10px;
+    font-size: 23px;
+    color: var(--color);
+    top: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.sendbtn:hover {
+    background: #f1f1f1;
+}
+.bonusicon, .bonusdiv .sendbonus {
+    position: relative;
+    transform: scale(1);
+    top: 1px;
+    float: right;
+    color: var(--color);
+    font-size: 29px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 100%;
+} 
+.bonusicon:active {
+    transform: scale(2);
+    transition: all 2s;
+}
+.contgen .bonusicon {
+    font-size: 40px;
+}
+.bonusdiv {
+    position: relative;
+    float: right;
+    width: 100%;
+} 
+.bonusdiv img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    top: 5px;
+    float: right;
+}
+.sendbonus {
+    position: relative;
+    top: -3px;
+}
+
+.tempcont {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tempcont img {
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.tempcont h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px auto;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.tempcont h6 {
+    margin-top: 0px;
+    color: #777;
+    font-weight: 500;
+}
+
+.msg {
+    position: relative;
+    max-width: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 7px auto;
+    transition: all 0.4s;
+}
+.msg p {
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 15px;
+    border-radius: 50px;
+}
+.msgright {
+    float: right;
+    transition: all 0.4s;
+}
+.msgleft {
+    float: left;
+}
+.msgright p {
+    background: var(--color);
+    color: white;
+    margin-right: 40px;
+}
+.msgleft p {
+    background: #eeeeee;
+    margin-left: 40px;
+    color: black;
+}
+
+.msg > img  {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    top: 5px;
+}
+.msgright > img  {
+    float: right;
+}
+.msgleft > img  {
+    float: left;
+}
+
+
+
+/* Apps Window */
+.appwindow {
+    position: relative;
+    height: 100%;
+}
+.homeapp {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+}
+.appbox {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    box-shadow: var(--shadow);
+    background: #f1f1f1;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.appbox:hover {
+    background: #eaeaea;
+}
+.appbox img {
+    width: 80px;
+}
+.appbox h4 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+}
+.messengerapp {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    padding: 40px 20px 100px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+    z-index: 950;
+}
+.topbar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.topbar img {
+    position: relative;
+    top: 3px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+} 
+.topbar h4 {
+    margin: auto;
+    float: left;
+    margin-left: 0px;
+    font-size: 22px;
+    color: #555;
+    top: 7px;
+    font-weight: 400;
+}
+.contactdiv {
+    position: relative;
+    margin-top: 70px;
+    height: 93%;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.contactbox {
+    position: relative;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.contactbox:hover {
+    background: #f6f6f6;
+}
+.contactbox img {
+    position: relative;
+    width: 45px;
+    float: left;
+    border-radius: 100%;
+    top: -3px;
+} 
+.contactbox h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: auto;
+    float: left;
+    margin-left: 20px;
+    top: 0px;
+}  
+.contactbox i {
+    position: absolute;
+    top: 38%;
+    right: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.contactbox i:hover {
+    color: var(--color);
+}
+.contactbox p {
+    text-align: left;
+    margin: auto;
+    margin-top: 25px;
+    left: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa;
+    width: 80%;
+    margin-left: 45px;
+}
+#contactsearch {
+    position: relative;
+    float: right;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 50px;
+    background: #f1f1f1;
+    top: -3px;
+    width: 200px;
+    transition: all 0.3s;
+}
+#contactsearch:hover {
+    background: #eaeaea;
+}
+#contactsearch:focus {
+    width: 240px; 
+    background: #eaeaea;
+}
+  
+.chatapp {
+    position: relative;
+    height: 95%;
+    width: 100%;
+    display: none;
+    -webkit-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+} 
+.fa-check {
+    color: lawngreen;
+    margin-left: 5px;
+}
+.dlchat a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.dlchat:hover a {
+    color: white;
+}
+  
+.secretapi {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 997;
+    text-align: center;
+    overflow-y: scroll;
+}
+.secretapi h2 {
+    font-size: 25px;
+    color: #aaa;
+    font-weight: 500;
+    margin-top: 60px;
+} 
+.scifi {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+    top: 0px;
+    bottom: 0px;
+    animation: secretfade 5s ease infinite, secretspin 20s linear infinite;
+    transition: all 0.3s;
+} 
+@keyframes secretfade {
+    0%{opacity: 0.2;}
+    50%{opacity: 0.6;}
+    100%{opacity: 0.2;}
+}
+@keyframes secretspin {
+    from{transform: rotate(0deg);filter: grayscale(100%)}
+    to{transform: rotate(360deg);filter: grayscale(80%)}
+}
+#fireflies {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.secretcont {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+audio {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 20px;
+    outline: none;
+}
+  
+/*Notifications*/ 
+.notifdiv {
+    position: absolute;
+    top: -140px;
+    left: 0px;
+    height: 120px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.11);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.4s;
+    z-index: 1000;
+    overflow: hidden;
+} 
+.constnotif {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7px;
+}
+.constnotif img {
+    position: relative;
+    width: 20px;
+    top: 5px;
+    margin-right: 10px;
+}
+.constnotif h6 {
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+    color: #aaa;
+    margin-top: -5px;
+    color: var(--color);
+}
+.notifs {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 70%;
+    overflow-y: scroll;
+    margin: auto;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 400;
+    box-sizing: border-box;
+    line-height: 1.5;
+} 
+.notifs p {
+    position: relative;
+    padding: 20px 0px;
+    width: 60%;
+    left: 0px;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin: auto;
+    cursor: pointer;
+} 
+.notifs p:hover {
+    background: #fafafa;
+}
+.notifinject small {
+    position: relative;
+    display: block;
+    top: 10px;
+    color: #ccc;
+}   
+.notifinject i {
+    position: absolute;
+    top: -2px;
+    right: 2px;
+    font-size: 17px;
+    color: #ccc;
+    font-style: normal;
+    padding: 5px;
+    z-index: 100;
+}
+.closenotif {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    width: 50px;
+    height: 120px;
+    background: #f1f1f1;
+    opacity: 0.5;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.closenotif i {
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    right: 0px;
+    top: 40%;
+    margin: auto;
+    color: #aaa;
+    transition: all 0.3s;
+}
+.notifdiv:hover .closenotif {
+    opacity: 1;
+    color: white;
+}
+.closenotif:hover i {
+    color: #333;
+}
+.notifaudio {
+    display: none;
+}
+.clearallnotifs {
+    position: absolute;
+    font-size: 12px;
+    left: 20px;
+    top: 20px;
+    color: #aaa;
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 100;
+    padding: 10px;
+}
+.clearallnotif:hover {
+    color: #555;
+}
+.notifdash {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 24%;
+    width: 100%;
+    box-shadow: 0px -5px 7px -6px rgba(0,0,0,0.14);
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fcfcfc;
+    display: none;
+    text-align: center;
+}
+.notifdate {
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+.notifdate span {
+    position: relative;
+    font-size: 23px;
+    padding-bottom: 5px;
+    display: block;
+} 
+.notifclock {
+    position: relative;
+    margin: 20px auto;
+    color: #555;
+    text-align: center;
+}
+.notifdash .digital-clock {
+    color: var(--color);
+}
+.notifdash hr {
+    border: none;
+    width: 100px;
+    margin: auto;
+    height: 1px;
+    background: #eaeaea;
+    margin-bottom: 10px;
+}
+.notiftimecont {
+    position: relative;
+    float: left;
+    width: 48%;
+}
+
+.todos {
+    position: relative;
+}
+.todos p, .alarms p {
+    font-size: 13px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    padding-right: 20px;
+    color: #777;
+    text-align: left;
+}
+.todocalen {
+    margin-right: 10px;
+    font-size: 16px;
+} 
+.todoclear, .alarmclear {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    color: #aaa;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.utilities {
+    position: relative;
+    margin: auto;
+    padding: 10px 0px;
+    height: 90%;
+    width: 48%;
+    float: right;
+    overflow-y: scroll;
+}
+.utilities h6 {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.alarms {
+    position: relative;
+    text-align: center;
+}
+.alarmicon, .ringing {
+    margin-right: 10px;
+    font-size: 21px!important;
+    position: relative;
+    float: left;
+    top: -3px;
+} 
+.ringing {
+    animation: vibrate-3 0.5s linear infinite both;
+    left: 0px;
+    text-align: left;
+    z-index: -1;
+}
+@keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}10%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}30%{-webkit-transform:translate(-1px,1px);transform:translate(-1px,1px)}40%{-webkit-transform:translate(1px,1px);transform:translate(1px,1px)}50%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}60%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}70%{-webkit-transform:translate(-1px,1px);transform:translate(-1px,1px)}80%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}90%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+
+.setalarm, .oldalarm {
+    position: relative;
+    margin-left: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--color);
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.oldalarm {
+    color: #333;
+}
+.dismiss {
+    font-size: 12px;
+    display: block;
+    color: var(--color);
+    cursor: pointer;
+}
+ 
+
+/*Contextmenu CSS */
+.contextmenu {
+    position: fixed;
+    display: none;
+    width: 200px;
+    z-index: 9999;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15); 
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.contextmenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+.contextmenu li {
+    position: relative;
+    padding: 10px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.contextmenu li:hover {
+    background: #f1f1f1;
+}
+
+/*Timepicker CSS */
+.timepicker {
+    padding: 8px 20px;
+    background: #fafafa;
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:1220px) {
+    .grid {
+        width: 100%;
+    }
+}
+@media (max-width:720px) {
+    .app {
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+    .typebox {
+        margin-bottom: 20px;
+    }
+    .typebox .fa-dragon {
+        top: auto;
+    }
+    .typebox i:not(.bonusicon):active {
+        transform: scale(1.2);
+    }
+    .messengerbox {
+        width: 90%;
+    }
+    .toolsbox {
+        margin: auto;
+        padding: 10px;
+        border-radius: 100%;
+        display: none;
+    }
+    .toolsbox:hover {
+        background: none;
+    }
+    .toolsbox i {
+        background: none;
+    }
+    .mobtoolsdiv {
+        position: relative;
+        display: block;
+        top: -25px;
+        width: 300px;
+        height: 20px;
+    }
+    .mobtoolsbtn {
+        position: relative;
+        font-size: 30px;
+        color: var(--color);
+        padding: 10px;
+        cursor: pointer;
+        float: left;
+        transition: all 0.3s;
+    }
+    .mobtools {
+        position: relative;
+        float: left;
+        left: -20px;
+        top: 11px;
+        display: none;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .mobtools i {
+        float: left;
+        font-size: 20px;
+        color: var(--color);
+        padding: 5px 10px;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .container {
+    	padding-bottom: 60px;
+        height: 81%;
+    }
+    .colors {
+        height: auto;
+        margin-bottom: 60px;
+        overflow-y: scroll;
+    }
+    .applygrad {
+        float: none;
+        display: block;
+        margin-top: 20px;
+        width: 100px;
+    }
+    .colors div {
+        margin-bottom: 10px!important;
+    }
+    .inneroptclick div {
+        margin-bottom: 60px;
+    }
+    .profileinfo {
+        padding-bottom: 20px;
+    }
+    .inneroptclick  h6 {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .profileinfo input, .weathersettings input {
+        width: 100%;
+        float: none;
+    }
+    .weathersettings div:nth-of-type(2) {
+        display: none;
+    }
+    .weathersettings label {
+        float: none;
+    }
+    
+    
+} 
+
+@media (max-width:550px) {
+    
+    .messengerbox {
+        width: 95%;
+        float: none;
+    }
+    .messenger {
+        width: 80%;
+    }
+    #contactsearch {
+        width: 120px;
+    }
+    #contactsearch:focus {
+        width: 150px;
+    }
+    
+    
+}
+
+@media (max-width:450px) {
+    nav .digital-clock {
+        display: none;
+    }
+    .messengerbox {
+        width: 85%;
+    }
+    
+}
+
+@media (max-width:370px) {
+    .setdiv {
+        padding: 10px 20px;
+    }
+    .setdiv label {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .btnsetdivs {
+        padding: 20px;
+    }
+    
+    
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
