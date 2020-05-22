@@ -1,0 +1,20 @@
+Octacore Version 2.11
+Release Updates
+
+Added features:
+Alarms & Reminders - you can set an alarm and reminders in the app (alarms are dynamic). Just type "set alarm".
+Notifications based sounds - sounds and weather notifications are added. Type "set reminder" to set a reminder.
+Music Mode: type music to play some music.
+Clock Updates: live clock has been added to the app, news displayed dynamically based on time.
+Weather is automatically set for Montreal. Any custom city can easily be added in weather settings.
+Dark Mode: right click and select dark mode, or turn it on in settings. Darkmode is also dynamically based on times of the day - will turn on automatically at 11pm and turn off at 6am.
+Added: Music mode, Admin Mode, Dark mode, multiple themes, dynamic chat backgrounds, 
+Notifications are now also dynamic, can remove all or some as you wish.
+Right click menu: shows quick options in app - activate dark mode quickly or return home with a single click.
+
+Bug fixes:
+fixed notification removal
+fixed dark mode activation
+fixed weather and time messaging
+
+Design & Development by Scorpionedge
