@@ -1,0 +1,31 @@
+//vacations spots generator
+
+vacations = {0:["Tangier","Morocco","Mediterranean Sea","Museums & Beaches","https://cdn.getyourguide.com/img/tour_img-1801422-146.jpg","$"], 1:["Cancun","Mexico","Caribbean Sea","Many Beaches","https://www.theyucatantimes.com/wp-content/uploads/2019/03/cancun.jpg","$$"],2:["Montego Bay","Jamaica","Caribbean Sea","Bustling City","https://media-cdn.tripadvisor.com/media/photo-s/0e/11/c9/69/aerial-view-of-sunscape.jpg","$$$"],3:["Benaulim","India","Arabian Sea","Resorts & Beaches","https://r-cf.bstatic.com/images/hotel/max500/220/220099233.jpg","$"],4:["Ishigaki","Japan","East China Sea","Pearl of Okinawa","https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d15f213a9da94.98961814.jpeg","$$$"],5:["Kep","Cambodia","Gulf of Siam","Exquisite Seafood","https://www.gocambodia.tours/wp-content/uploads/2019/06/KEP-Beach.jpg","$"],6:["Malindi","Kenya","Indian Ocean","Surfing & Beaches","https://media-cdn.tripadvisor.com/media/photo-s/0f/14/f3/0b/driftwood-beach-club.jpg","$$"],7:["San Andreas","Colombia","Caribbean Sea","Coral Island","https://s3-pro.roomonline.es/cobi/media/www.sirenishotels.com/28/bc/san_andres_colombia_04.jpg","$"],8:["San Salvadore","Salvadore","Pacific Ocean","Volcano","https://diarioroatan.com/wp-content/uploads/2020/05/san-salvador-el-salvador-167875782-598b889a68e1a2001184dcea-1024x576.jpg","$$"],9:["Tulum","Mexico","Caribbean Sea","Mayan Empire","https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Femilysiegel%2Ffiles%2F2017%2F02%2Ftulum-1200x750.jpg","$$"]};
+  
+  
+
+  
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>OctaCore - A.I Powered Messaging System</title>
+	<meta name="author" content="Scorpion Edge">
+	<meta name="description" content="Artificial Intelligence Messaging System">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1596ff"> 
+	<link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/aimsgs.js"></script>
+    <script src="js/recsgen.js"></script>
+	<link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style class="addedstyles"></style>
+    <style class="heystyles"></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>--> 
+    
+         
+</head>         
+          
+<body>                  
+	           
+    <div class="grid">             
+        <div class="app">   
+    
+            <nav>
+                <img class="logo" src="images/logo.png"/>
+                <div class="digital-clock"></div>
+                <h4>OctaCore</h4>
+                <div class="statusbar">
+                    <div class="account"><img src="images/prof.png"/></div> 
+                    <i class="fas fa-bell notifbtn"></i>
+                    <i class="fas fa-microphone-alt speechicon"></i>
+                </div>    
+            </nav>
+               
+            <!-- Settings window -->    
+            <div class="settingsbox">  
+                <i class="fas fa-power-off poweroff"></i>
+                <div class="spacerl"></div> 
+                <div class="profile">
+                    <div class="profpic"><i class="fas fa-camera"></i></div>  
+                    <div class="changeprofpic">  
+                        <span><input class="profchange" id="profchange" type="file" accept="image/*"><i>Add Profile Picture</i></span>
+                        <span class="removeprofpic">Remove Picture</span> 
+                        <span class="closepic">Close</span>
+                    </div>    
+                    <h4 class="fullnamefill">Your Name</h4> 
+                    <small>Edit in profile info below</small>
+                    <p> Active Now</p>          
+                </div>                   
+                <div class="options setbox">           
+                    <h4>General Settings</h4>    
+                    <div class="optbox">
+                        <div class="optclick closedopt opttheme"><h6>Theme</h6>
+                        <i class="fas fa-palette opticon"></i></div>
+                        <div class="colorscont">
+                            <div class="inneroptclick colors tcolors">
+                            <small>Choose a theme color</small><br>
+                            <div class="tcolor0"></div><div class="tcolor1"></div><div class="tcolor2"></div><div class="tcolor3"></div><div class="tcolor4"></div><div class="tcolor5"></div><div class="tcolor6"></div><div class="tcolor7"></div><div class="tcolor8"></div><div class="tcolor9"></div><div class="tcolor10"></div><br> 
+                            <h6>Custom Color &emsp;</h6>
+                            <input type='color' value="#ff3b30" class="colorpicker"/>  
+                            </div>     
+                            <p style="height: 50px"></p>
+                            <div class="inneroptclick colors colorsbg">
+                            <small>Choose a chat background color</small><br>
+                            <div class="color0"></div><div class="color1"></div><div class="color2"></div><div class="color3"></div><div class="color4"></div><div class="color5"></div><br><br> 
+                            <h6>Custom Gradient</h6><br><br>
+                            <input type='color' value="#00a2fb" class="gradpicker1"/> <input type='color' value="#d8ff05" class="gradpicker2"/> <span class="applygrad">Apply Gradient</span><br><br>
+                            </div>  
+                            <div class="spacer"></div>  
+                            <div class="inneroptclick colors chatimgbg">
+                                <small>Set a picture background</small>
+                                <div class="bgcolor"></div> 
+                            </div>              
+                        </div>                 
+                        <div class="clear"></div>              
+                    </div>             
+                    <div class="optbox">       
+                        <div class="optclick closedopt"><h6>Reactions</h6>
+                            <i class="fas fa-heart opticon activereact"></i></div> 
+                            <div class="inneroptclick reactions"> 
+                                 <i class="fas fa-heart"></i><i class="fas fa-laugh-squint"></i><i class="fas fa-paw"></i><i class="fas fa-dragon"></i><i class="fas fa-dog"></i><i class="fas fa-cat"></i><i class="fas fa-fish"></i><i class="fas fa-music"></i><i class="fas fa-smile"></i><i class="fas fa-grin-hearts"></i><i class="fas fa-angry"></i><i class="fas fa-surprise"></i><i class="fas fa-grin-tongue"></i><i class="fas fa-sad-tear"></i><i class="fas fa-kiss-wink-heart"></i>   
+                                  
+                                <small>Add a reaction to your chat</small>
+                            </div>      
+                        <div class="clear"></div>    
+                    </div>      
+                    <div class="optbox">  
+                        <div class="optclick closedopt optclickprof"><h6>Profile Info</h6>
+                            <i class="fas fa-user-alt opticon"></i></div>  
+                            <div class="inneroptclick profileinfo">
+                                <div><h6><i class="fas fa-user-tie"></i>Profile Name</h6><input type="name" placeholder="Enter Name" class="profname"></div> 
+                                <div><h6><i class="fas fa-globe-africa"></i>Country</h6><input type="country" placeholder="Enter a country" class="profplace"></div> 
+                                <div><h6><i class="fas fa-briefcase"></i>Skill/Job</h6><input type="job" placeholder="Enter a skill or job" class="profjob"></div>
+                                <div><h6><i class="fas fa-at"></i>E-mail Address</h6><input type="email" placeholder="Enter an email" class="profemail"></div>
+                                <div><h6><i class="fas fa-birthday-cake"></i>Date of Birth</h6><input type="email" placeholder="Date of Birth" class="profbirth"></div>
+                                <small class="saveprofile">Save Changes</small> 
+                                <small class="clearprofile">Clear Info</small> 
+                                <div class="clear"></div>
+                            </div>    
+                            <i class="fas fa-long-arrow-alt-down scrollable bounce-top"></i>
+                        <div class="clear"></div>      
+                    </div>               
+                    <div class="optbox">  
+                        <div class="optclick closedopt"><h6>Weather</h6>
+                            <i class="fas fa-cloud-sun opticon"></i></div>  
+                            <div class="inneroptclick weathersettings">
+                                <div><h6>Add City</h6><input placeholder="Add a city" class="weathercityy"></div>
+                                <div><h6>Temp Scale</h6><input type="radio" name="weathertemp" class="tempfahr"><span>Fahrenheit</span><input type="radio" name="weathertemp" class="tempcel" checked><span>Celsius</span></div>  
+                                <div><h6>Weather Notifications?</h6><label class="form-switch initrepl"><input type="checkbox"><i></i></label></div>
+                            </div>      
+                        <div class="clear"></div>      
+                    </div>
+                    <div class="optbox">  
+                        <div class="optclick closedopt"><h6>Notifications</h6>
+                            <i class="fas fa-bell opticon"></i></div>  
+                            <div class="inneroptclick notifsettings">
+                                <div><h6>Play Notification Sound</h6><label class="form-switch notifsound"><input class="soundbtn" type="checkbox" checked><i></i></label></div>
+                                <small class="viewnotifs">View All</small>
+                                <small class="clearnotifs">Clear Notifications</small> 
+                            </div>    
+                        <div class="clear"></div>     
+                    </div>   
+                       
+                        
+                </div>           
+                <div class="aisettings setbox">      
+                    <h4>AI Settings</h4>    
+                    <div class="setdiv">
+                        <h6><i class="fas fa-atom"></i>Initiate Reply</h6>
+                        <label class="form-switch initrepl"><input type="checkbox"><i></i></label>
+                    </div>
+                    <div class="setdiv">  
+                        <h6><i class="fas fa-coffee"></i>Recommendations</h6>
+                        <label class="form-switch initrepl"><input type="checkbox"><i></i></label>
+                    </div> 
+                    <div class="setdiv">  
+                        <h6><i class="fas fa-binoculars"></i>Preemptive Messaging</h6>
+                        <label class="form-switch initrepl"><input type="checkbox"><i></i></label>
+                    </div>
+                    <div class="setdiv">  
+                        <h6><i class="fas fa-music setmusic"></i>Music Mode</h6>
+                        <label class="form-switch initrepl"><input type="checkbox"><i></i></label>
+                    </div> 
+                    <div class="setdiv setdivadmin">  
+                        <h6><i class="fas fa-user-shield"></i>Admin Mode</h6> 
+                        <label class="form-switch"><input class="adminbtn" type="checkbox"><i></i></label><input class="admininput" type="password" placeholder="Enter password"><small>Admin Access denied</small> 
+                    </div>
+                     
+                    
+                </div>   
+                <div class="chatsettings setbox">     
+                    <h4>Chat Settings</h4>
+                    <div class="setdiv"> 
+                        <h6><i class="fas fa-adjust"></i>Dark Mode</h6>
+                        <label class="form-switch darkmode"><input type="checkbox"><i></i></label>
+                    </div>
+                    <div class="setdiv">
+                        <h6><i class="fas fa-users"></i>Friend Mode</h6>
+                        <label class="form-switch"><input type="checkbox"><i></i></label>
+                    </div> 
+                    <div class="setdiv">
+                        <h6><i class="fas fa-mask"></i>Secret Interace</h6> 
+                        <label class="form-switch secretbtn"><input type="checkbox"><i></i></label>
+                    </div>
+                    <div class="setdiv btnsetdivs"> 
+                        <h6><i class="fas fa-cloud-download-alt"></i>Backup Chat</h6>
+                        <span class="dlchat"><a href="#" id="dllink">Download Chat</a></span>
+                    </div>  
+                    <div class="setdiv btnsetdivs">
+                        <h6><i class="fas fa-trash"></i>Clear Chat</h6>
+                        <span class="clearchat">Clear Chat</span> 
+                    </div>
+                    <div class="setdiv btnsetdivs">
+                        <h6><i class="fas fa-trash"></i>Clear Account</h6>
+                        <span class="clearall">Clear All</span> 
+                    </div> 
+                         
+                </div>        
+                     
+            </div>        
+                          
+            <div class="appwindow">   
+                 
+            <!--Home App-->    
+            <div class="homeapp">
+                <div class="appbox msgapp">    
+                    <img src="images/logo.png"/>  
+                    <h4>Messaging<br>App</h4>  
+                </div>
+                <div class="appbox startifyapp">
+                    <img src="images/logo.png"/>
+                    <h4>Startify<br>App</h4>
+                    <!--create app that recommends user things to do during day. Pick template, pick style of AI (smart, funny,etc)-->
+                </div>
+                <div class="appbox">
+                    <img src="images/logo.png"/>
+                    <h4>OctaCore<br>Games</h4> 
+                </div>
+                <div class="appbox calcdiv">
+                    <img src="images/logo.png"/>  
+                    <h4>OctaCore<br>Calculators</h4>
+                </div>
+                
+            </div>     
+            
+            <!-- Messenger App -->
+            <div class="messengerapp apps">
+                 <div class="topbar"> 
+                    <div class="contactback">
+                    <i class="fas fa-chevron-left backchats"></i> 
+                    <h6>Apps</h6> 
+                    </div>     
+                     <input type="text" id="contactsearch" onkeyup="searchFunc()" placeholder="Search...">
+                </div>
+                <div class="contactdiv">
+                    <div class="contactbox octacoremsg">
+                        <img src="images/logo.png"/>
+                        <h6>OctaCore System</h6> 
+                        <p class="latestmsg">Interact with the AI</p>
+                        <i class="fas fa-ellipsis-h"></i> 
+                    </div>
+                    <div class="contactbox quadflowmsg"> 
+                        <img src="images/quadflow.png"/>
+                        <h6>Quadflow</h6>
+                        <p>Start a conversation with Quadflow...</p>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="contactbox">
+                        <img src="images/selogo.png"/>
+                        <h6>Scorpion Edge</h6>
+                        <p>Start a conversation with Scorpion Edge...</p>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                      
+                      
+                </div> 
+                 
+            </div>      
+                 
+            <!-- Quadflow App -->    
+                   
+                 
+            <!--Chat app -->     
+            <div class="chatapp apps">     
+            <div class="chattools"> 
+                <div class="chatback">
+                    <i class="fas fa-chevron-left backchats"></i>
+                    <h6 class="contactname">Contacts</h6>
+                </div>
+                <h6 class="contchatname"><i class="fas fa-angle-down chatnameinfo"></i><span class="fullnamefill"></span></h6> 
+            </div>      
+            <div class="chatinfo">
+                <div style="height: 30px"></div>
+                <div class="profpic"></div>
+                <h4 class="fullnamefill"></h4>
+                <div class="chatinfocall">
+                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-envelope"></i> 
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="chatinfodiv">
+                    <h6>Contact Info</h6>
+                    <p><i class="fas fa-home"></i><span class="placefill"></span> </p>
+                    <p><i class="fas fa-envelope"></i><span class="emailfill"></span></p>
+                </div>
+                <div class="chatinfodiv">
+                    <h6>About <span class="fullnamefill"></span></h6>
+                    <p><i class="fas fa-briefcase"></i><span class="jobfill"></span></p>
+                    <p><i class="fas fa-birthday-cake"></i><span class="birthfill"></span></p>
+                </div>
+                <div class="chatinfodiv">
+                    <h6>Theme</h6> 
+                    <div class="personaltheme"></div>
+                </div>
+            </div>     
+            <div class="container">
+                <div class="tempcont">  
+                    <img src="images/prof.png"/>
+                    <h4 class="fullnamefill"></h4>
+                    <h6 class="placefill"></h6>
+                </div>  
+                <div class="contgen" id="downchat">
+                    <div class="savedchats"></div>  
+                    
+                     
+                </div> 
+            </div>       
+                            
+      
+            <!--Typing box --> 
+            <div class="typebox">  
+                <div class="tools">  
+                    <div class="toolsbox"><i class="fas fa-stream suggestbtn"></i></div> 
+                    <div class="toolsbox"><i class="fas fa-smile-beam emojipicker"></i></div>
+                    <div class="toolsbox toolsboximg"><label class="custom-file-upload chatimguploader"><input type='file' id='getval' name="background-image"><i class="fas fa-image imgbtn"></i></label></div> 
+                    <div class="mobtoolsdiv">
+                        <i class="fas fa-angle-right mobtoolsbtn"></i>
+                        <div class="mobtools">
+                            <i class="fas fa-stream suggestbtn"></i>
+                            <i class="fas fa-smile-beam emojipicker"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="messengerbox"> 
+                    <textarea class="messenger" type="text" placeholder="Aa"></textarea>
+                     <div class="imginsert"></div>
+                    <i class="fas fa-paper-plane sendbtn"></i>
+                </div>   
+                <i class="fas fa-heart bonusicon"></i>
+                <div class="clear"></div> 
+                <div class="emojidiv">
+                    <h6>Send an emoji</h6> 
+                </div>   
+                <div class="suggestdiv"> 
+                </div> 
+                <i class="fas fa-times closetypebox"></i>
+            </div>    
+             
+            </div> <!--Chat app --> 
+          
+            <!-- Secret API --> 
+            <div class="secretapi">    
+                <img class="scifi" src="images/scifi2.jpg">
+                <div id="fireflies">
+                    <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+                </div>
+                
+                <div class="secretcont">   
+                     <h2>Secret Interface</h2> 
+                     <h4><i class="fab fa-github"></i><br>Github</h4><br>
+                     <p><a href="https://github.com/urielbitton/octacore" class="secretcontbtn">View Github Repo</a></p>
+                     <div class="spacer"></div>
+                     <h4><i class="fas fa-code-branch"></i><br>Version & Updates</h4>
+                    <small>Version 2.2.1<br>Size: 135 kb<br>Technologies:<br>jquery, angular, reactorjs.</small>
+                    <div class="spacer"></div>
+                    <h4><i class="fas fa-info-circle"></i><br>About Octacore</h4>
+                    <small>Octacore is an artificial intelligence messaging app that manages your day and daily activities</small>
+                    <h6>Developer</h6>
+                    <p><a href="http://urielbitton.design/">Uriel Bitton</a></p>
+                    <a href="https://www.scorpionedge.com/"><img class="devimg" src="images/devlogo.png"/></a>
+                    <div class="spacer"></div>
+                    <h4><i class="fas fa-braille"></i><br>Project</h4> 
+                    <small>Download the app project here</small>
+                    <a href="app.zip" class="secretcontbtn sbtn2" download>Download</a>
+                    <div class="spacer"></div><div class="spacer"></div>
+                    <p>Check us out on behance</p>
+                    <a href="https://behance.net/scorpionedge"><h4><i class="fab fa-behance"></i></h4></a>
+                    <div class="spacer"></div>
+                    <div class="credits"><img src="images/logo.png"/><small>Octacore App. 2020, MIT License.</small></div>
+                    
+                </div>  
+                   
+            </div>        
+                     
+                            
+            </div>    
+               
+            <!--Startify App -->  
+            <div class="startify">  
+                <div class="startifygrad"></div>  
+                <div class="spacer"></div>
+                 
+                <div class="startdaynav">
+                <h3 class="startdaytitle">Experience Startify</h3> 
+                <button class="startdaybtn"><i class="fas fa-bolt"></i>Start My Day</button>
+                </div>     
+                 
+                <div class="startday">
+                    <h4>Start My Day</h4>
+                    <i class="fas fa-times closestartday"></i>
+                    <div class="startgreet">
+                        <h6>Good <i class="timeofday"></i> <i class="firstnamefill"></i><br> <span>Choose your day to get started.</span></h6>
+                        <div class="chooseday">
+                            <div class="starttrip"><img src="images/trip.jpg"/><h5>Trip</h5></div>
+                            <div class="startwork"><img src="images/work.jpg"/><h5>Work</h5></div>
+                            <div class="startleisure"><img src="images/leisure.jpg"/><h5>Leisure</h5></div>
+                            <div class="startstudy"><img src="images/study.jpg"/><h5>Study</h5></div>
+                        </div>  
+                        <div class="startdaygen">
+                             
+                        </div> 
+                    </div>   
+                </div>
+                
+                <div class="recommendscont startifycont">  
+                    <h3>Recommendations</h3>
+                    <span class="addrectitle"><i class="fas fa-plus"></i> Add</span> 
+                    <div class="clear"></div>  
+                     <h4>Lifestyle</h4> 
+                    <div class="lifecont">
+                        <div class="lifebox"><img src="images/lifestyle.jpg"/><h5>Lifestyle</h5></div>
+                        <div class="vacabox"><img src="images/vacation.jpg"/><h5>Vacations</h5></div>
+                    </div>     
+                    <h4>Travel</h4> 
+                    <div class="travelcont">  
+                        <div><img src="images/america.jpg"/><h5>North America</h5></div>
+                        <div><img src="images/europe.jpg"/><h5>Europe</h5></div>
+                        <div><img src="images/asia.jpg"/><h5>Asia</h5></div>
+                        <div><img src="images/africa.jpg"/><h5>Africa</h5></div> 
+                    </div> 
+                    <h4>Technology</h4>  
+                    <div class="techcont">
+                        <div><img src="images/tech.jpg"/><h5>Web</h5></div>
+                        <div><img src="images/tech-mob.jpg"/><h5>Mobile</h5></div> 
+                    </div> 
+                    <h4>Activities</h4> 
+                    <div class="activitycont">
+                        <div><img src="images/summer.jpg"/><h5>Summer</h5></div>
+                        <div><img src="images/winter.png"/><h5>Winter</h5></div>
+                        <div><img src="images/outdoor.jpg"/><h5>Outdoors</h5></div>
+                        <div><img src="images/indoor.jpg"/><h5>Indoors</h5></div> 
+                    </div>
+                    <h4>Music</h4>
+                    <div class="musiccont">
+                        <div><img src="images/spotify.jpg"/><h5>Spotify</h5></div>
+                        <div class="youtubebox"><img src="images/youtube.jpg"/><h5>YouTube</h5></div>
+                        <div><img src="images/soundcoud.jpg"/><h5>Soundcloud</h5>
+                        </div>
+                    </div> 
+                    <h4>Videos</h4>
+                    <div class="videoscont"> 
+                        <div><img src="images/comedy.jpg"/><h5>Comedy</h5></div>
+                        <div><img src="images/education.jpg"/><h5>Education</h5></div>
+                        <div><img src="images/entertain.jpg"/><h5>Entertainment</h5></div>
+                        <div><img src="images/film.jpg"/><h5>Films</h5></div> 
+                    </div>
+                    <h4>Sports</h4>
+                    <div class="sportscont"> 
+                        <div><img src="images/baseball.jpg"/><h5>Baseball</h5></div>
+                        <div><img src="images/hockey.jpg"/><h5>Hockey</h5></div>
+                        <div><img src="images/football.jpg"/><h5>Football</h5></div>
+                        <div><img src="images/soccer.jpg"/><h5>Soccer</h5></div>
+                    </div>     
+                    <h4>News</h4>   
+                    <div class="newscont"> 
+                        <div><img src="images/business.jpg"/><h5>Business</h5></div>
+                        <div><img src="images/finance.jpg"/><h5>Finance</h5></div>
+                        <div><img src="images/world.jpg"/><h5>World</h5></div>
+                        <div><img src="images/events.jpg"/><h5>Current Events</h5></div> 
+                    </div> 
+                    <div class="spacerl"></div><div class="spacerl"></div> 
+                    <div class="spacer"></div>
+             
+                </div> 
+                 
+                <div class="heyoctacore"> 
+                    <i class="fas fa-times closehey"></i>
+                    <h5><img class="heylogo" src="images/logo.png"/> Hey Octacore</h5>
+                    <div class="heymsg">
+                        <h4><span>Good <i class="timeofday">morning</i> <i class="firstnamefill"></i>.</span> <strong>What can i recommend for you this</strong> <i class="timeofday"></i>?</h4>
+                        <div class="heyloader heyrecommend">  
+                             <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                            <h6>Loading Recommendations</h6>
+                        </div>  
+                        <div class="swipecont slider heyrecommend">
+                            <div class="tech-slide"> 
+                                    
+                            </div> 
+                            <div class="music-slide"> 
+                                   
+                            </div> 
+                            <div class="video-slide">    
+                       
+                            </div>    
+                            <div class="news-slide">    
+                                  
+                            </div>
+                            <div class="activity-slide">   
+                                 
+                            </div>
+                            <div class="sports-slide"> 
+                                    
+                            </div>
+                            <div class="def-slide">
+                                  
+                            </div>     
+                        </div>     
+                        <div class="heytitle heyrecommend">
+                            <h6>Tech</h6><h6>Music</h6><h6>Videos</h6><h6>News</h6><h6>Activities</h6><h6>Sports</h6><h6>Octacore</h6>
+                        </div>    
+                    </div>  
+                </div>   
+                 
+                <div class="addreccont">
+                    <i class="fas fa-times closeaddrec"></i>
+                    <h5>Add a Recommendation</h5>
+                    <div class="addpreview"><label class="custom-file-upload"><input type='file' id="addrecimg"><i class="fas fa-image imgbtn"></i></label></div> 
+                    <input class="addrectxt" placeholder="Add Text">
+                    <select class="recselect">
+                        <option disabled selected>Choose a Category</option>
+                        <option value="1">Lifestyle</option><option value="2">Travel</option><option value="3">Technology</option><option value="4">Activities</option><option value="5">Music</option><option value="6">Videos</option><option value="7">Sports</option><option value="8">News</option>
+                    </select>
+                    <small class="addrecbtn">Add to App</small> 
+                </div> 
+                
+                <!--JS fills in this div based on which categ box was clicked-->
+                <div class="recspage"></div> 
+                
+                <!--timeline import here --> 
+                
+                  
+            </div> <!-- end of startifyapp -->   
+                 
+              
+             
+            <!-- App when closed -->        
+            <div class="closedapp"></div>    
+                 
+             
+            <div class="notifdiv"> 
+                <small class="clearallnotifs">Clear All</small>
+                <div class="constnotif"><h6><img src="images/logo.png"/>Octacore Notifications</h6></div> 
+                <div class="notifs notifinject"></div>
+                <div class="closenotif"><i class="fas fa-times"></i></div>
+                <div class="notifaudio allaudios">
+                    <audio id="notifaudio"><source src="images/notif.mp3" type="audio/ogg"></audio>   
+                </div> 
+                <div class="notifdash"> 
+                    <div class="notiftimecont">
+                        <div class="notifdate"></div>
+                        <div class="notifclock"><div class="digital-clock"></div></div>
+                    </div>    
+                    <div class="utilities">   
+                        <h6>Reminders</h6>
+                        <div class="todos"></div>
+                        <h6>Alarms</h6>
+                        <div class="alarms"></div>
+                    </div> 
+                     
+                    <div class="clear"></div> 
+                </div>     
+            </div>       
+                           
+                  
+        </div>                  
+    </div>            
+    
+     
+    <div class="contextmenu">  
+      <ul>
+        <li class="cmoption cmhome">Home</li> 
+        <li class="cmoption cmreload">Refresh</li> 
+        <li class="cmoption cmdark">Dark Mode</li> 
+        <li class="cmoption cmnotif">Notifications</li>
+        <li class="cmoption cmsettings">Settings</li> 
+        <li class="cmoption cmsettings">Change Reaction</li>   
+      </ul>
+    </div>
+    
+     
+        
+    
+    
+</body>
+
+</html>

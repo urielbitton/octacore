@@ -1,0 +1,2692 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Montserrat, sans-serif;
+}
+  
+:root {
+    --color: #1596ff;
+    --shadow: 0 1px 3px rgba(0,0,0,.1);
+    --border: #e9e9e9;
+    --dark: #0b1726;
+    --lightdark: #142336;
+}
+
+.grid {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+}
+.xgrid { 
+    padding: 50px 0px;
+}
+.clear {
+    clear: left;
+}
+
+h1,h2,h3,h4,h5,h6, i, p,li,button, a, span,small {
+    position: relative;
+}
+img {
+    object-fit: cover;
+}
+button {
+    outline: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+a:hover {
+    text-decoration: underline;
+}
+input, textarea {
+    outline: none;
+}
+
+::selection {
+    background: none;
+    color: var(--color);
+}
+::-webkit-scrollbar {
+    display: none;
+} 
+.section {
+    position: relative;
+}
+.spacer {
+    height: 50px;
+}
+.spacerl {
+    height: 100px;
+}
+
+
+
+.app {
+    position: relative;
+    width: 700px;
+    height: 100vh;
+    box-shadow: 0 1px 13px rgba(0,0,0,.1);
+    margin: auto;
+    border-radius: 10px;
+    background: #fafafa;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border);
+    background: #f6f6f6;
+    z-index: 999;
+    transition: all 0.4s;
+}
+.logo {
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+    z-index: 10;
+    float: left;
+} 
+nav .digital-clock {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    top: 18px;
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+.speechicon {
+    position: relative;
+    font-size: 22px;
+    color: #aaa;
+    float: left;
+    transition: all 0.3s;
+    z-index: 100;
+    padding: 5px;
+    cursor: pointer;
+}
+.notifbtn:hover {
+    color: var(--color);
+}
+nav h4 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    color: #333;
+    transition: all 0.3s;
+}
+.settings {
+    position: relative;
+    top: 5px;
+    padding: 10px;
+    float: right;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.statusbar {
+    position: relative;
+    float: right;
+}
+.statusbar i {
+    position: relative;
+    top: 7px;
+    float: right;
+    margin-right: 5px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.account {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #f1f1f1;
+    float: right;
+    top: 10px;
+    margin: auto 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.account img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.settings:hover {
+    color: var(--color);
+}
+.settingsbox {
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    z-index: 998;
+    transition: all 0.4s;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+}     
+.profpic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(images/prof.png);
+    background: #e1e1e1;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+.profpic i {
+    position: absolute;
+    font-size: 20px;
+    color: #555;
+    right: -5px;
+    bottom: 7px;
+    border-radius: 100%;
+    padding: 7px;
+    background: #e9e9e9;
+    z-index: 20;
+}
+.profile h4 {
+    font-size: 24px;
+    display: inline-block;
+    color: #555;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    z-index: 1;
+    outline: pink;
+    text-align: center;
+    cursor: pointer;
+}
+.profile small {
+    width: 100px;
+    display: none;
+    margin: 5px auto;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 20;
+}
+.profile p {
+    font-size: 14px;
+    margin: auto;
+    top: -45px;
+    transition: all 0.7s;
+}
+.profile p::before {
+    position: relative;
+    content: "•";
+    color: lawngreen;
+    font-size: 60px;
+    top: 12px;
+}
+.options {
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    transition: all 0.3s;
+}
+.optbox {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.optbox:hover {
+    background: #f1f1f1;
+}
+.optbox h6 {
+    font-size: 15px;
+    margin: auto;
+    color: #555;
+    font-weight: 500;
+    float: left;
+    top: 7px;
+    cursor: auto;
+} 
+.optbox small {
+    display: block;
+}
+.optclick {
+    position: relative;
+    height: 30px;
+    padding: 20px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.inneroptclick hr {
+    position: relative;
+    border: none;
+    background: #d9d9d9;
+    height: 1px;
+    width: 70%;
+}
+.inneroptclick, .colorscont {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-y: scroll;
+    cursor: default;
+}
+.colorscont .colors {
+    position: relative;
+    top: auto;
+    overflow-y: visible;
+    padding: 0 20px;
+}
+.colors div {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin: 15px;
+    display: inline-block;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+} 
+.applygrad {
+    position: relative;
+    padding: 8px;
+    float: right;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+    z-index: 100;
+    color: #555;
+} 
+.applygrad:hover {
+    background: var(--color);
+    color: white;
+}
+.chatimgbg {
+    position: relative;
+}
+.bgcolor {
+    background-image: url(https://picsum.photos/200/300);
+    background-position: center;
+    background-size: cover;
+}
+/*bg colors */
+.color0{background:#fafafa}
+.color1{background:linear-gradient(180deg,#fbf004 0,#2acd00 100%)}
+.color2{background:linear-gradient(180deg,#04bcfb 0,#9000ff 100%)}
+.color3{background:linear-gradient(180deg,#04bcfb 0,#00ffc4 100%)}
+.color4{background:linear-gradient(180deg,#fb0479 0,#ffeb00 100%)}
+.color5{background:linear-gradient(0deg,#22c1c3 0,#fdbb2d 100%)}
+/*theme colors */
+.tcolor0 {background: #ff3b30;}
+.tcolor1 {background: #5633fd;}
+.tcolor2 {background: #1596ff;}
+.tcolor3 {background:  #00dfeb;}
+.tcolor4 {background: #ff0077;}
+.tcolor5 {background: #436175;}
+.tcolor6 {background: #52eb00;}
+.tcolor7 {background: #556326;}
+.tcolor8 {background: #000000;} 
+.tcolor9 {background: #e4ff6b;} 
+.tcolor10 {background: #ffca0a;}
+ 
+.colors {
+    margin-top: 20px;
+}
+@keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+.reactions small {
+    display: block;
+    margin-top: 15px;
+}
+.reactions i {
+    margin: 15px 12px;
+    transition: all 0.3s;
+    font-size: 25px;
+    cursor: pointer;
+} 
+.fa-palette {
+    background: -webkit-linear-gradient(319deg, rgba(234,36,255,1) 0%, rgba(122,56,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-laugh-squint,.fa-smile,.fa-surprise,.fa-grin-tongue {
+    background: -webkit-linear-gradient(319deg, rgba(255,164,36,1) 0%, rgba(255,218,25,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-grin-hearts,.fa-kiss-wink-heart {
+    background: linear-gradient(165deg, rgba(255,203,11,1) 0%, rgba(255,203,11,1) 32%, rgba(255,0,27,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-heart {
+    background: -webkit-linear-gradient(319deg, rgba(255,76,36,1) 0%, rgba(255,25,49,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-angry {
+    background: linear-gradient(319deg, rgba(255,127,0,1) 0%, rgba(208,0,29,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-paw {
+    background: -webkit-linear-gradient(319deg, rgba(234,36,255,1) 0%, rgba(122,56,255,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-dragon {
+    background: -webkit-linear-gradient(319deg, rgba(255,183,26,1) 0%, rgba(255,38,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-dog {
+    background: linear-gradient(165deg, rgba(40,28,13,1) 0%, rgba(119,92,50,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-cat {
+    background: linear-gradient(165deg, rgba(219,124,0,1) 0%, rgba(119,92,50,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}  
+.optbox .fa-music, .contgen .fa-music, .typebox .fa-music, .statusbar .fa-music{
+    background: -webkit-linear-gradient(347deg, rgba(255,115,34,1) 0%, rgba(208,0,172,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+} 
+.fa-sad-tear {
+    background: linear-gradient(180deg, rgba(255,203,11,1) 0%, rgba(193,190,120,1) 57%, rgba(0,185,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-fish {
+    background: linear-gradient(326deg, rgba(255,147,5,1) 0%, rgba(255,235,8,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.fa-cloud-sun {
+    background: linear-gradient(184deg, rgba(255,147,5,1) 0%, rgba(255,204,18,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.optbox .fa-bell {
+    background: linear-gradient(135deg, rgba(216,255,5,1) 0%, rgba(0,162,251,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.optclick .fa-user-alt {
+    background: linear-gradient(15deg, rgba(5,128,255,1) 0%, rgba(18,230,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typebox .fa-dragon,.typebox .fa-fish {
+    top: -50px;
+}
+ 
+.opticon {
+    float: right;
+    top: 0px;
+    color: #555;
+    font-size: 22px;
+    padding: 5px;
+}
+.setbox {
+    position: relative;
+    margin-bottom: 40px;
+}
+.setbox h4 {
+    text-align: left;
+    color: #555;
+    font-size: 20px;
+}
+.changeprofpic {
+    position: relative;
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: none;
+}
+.changeprofpic span {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    box-sizing: border-box;
+} 
+.changeprofpic span:hover {
+    background: var(--color);
+    color: white;
+}
+.changeprofpic input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.changeprofpic span i {
+    font-style: normal;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.profileinfo div, .weathersettings div, .notifsettings div  {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+}
+.weathersettings div, .notifsettings div {
+    height: 30px;
+}
+.profileinfo h6, .weathersettings h6 {
+    float: left;
+    color: #555;
+    font-size: 16px;
+}
+.weathersettings label, .notifsettings label {
+    float: right;
+}
+.weathersettings span {
+    float: right;
+    font-size: 13px;
+    top: 12px;
+}
+.addweatherdiv > div {
+    margin-left: 50px;
+}
+input[type="radio"] {
+    margin: auto 10px;
+    width: 20px;
+    height: 20px;
+}
+.notifsettings small {
+    padding: 5px 10px;
+    float: left;
+    font-size: 13px;
+    border-radius: 10px;
+    color: #555;
+    margin-right: 20px;
+    margin-left: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.notifsettings small:hover {
+    background: var(--color);
+    color: #fff;
+}
+.profileinfo i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.profileinfo input, .weathersettings input{
+    position: relative;
+    float: right;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #333;
+}
+.profileinfo input::placeholder, .weathersettings input::placeholder  {
+    color: #aaa;
+}
+.profileinfo small {
+    color: #555;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    float: left;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.profileinfo small:hover {
+    background: var(--color);
+    color: #fff;
+}
+.scrollable {
+    position: absolute;
+    top: 120px;
+    right: 5px;
+    color: var(--color);
+    font-size: 20px;
+    
+}
+.bounce-top {
+    animation: bounce-top 3s infinite both;
+}
+@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
+
+.setdiv {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    text-align: left;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+.setdivadmin input {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    transition: visibility 0.3s, left 0.5s;
+    border: none;
+    padding: 10px;
+    top:-7px;
+    left: 30px;
+    background: none;
+    visibility: hidden;
+} 
+.adminbtn {
+    position: relative;
+    z-index: 10;
+} 
+.setdivadmin small {
+    color: var(--color);
+    margin-left: 50px;
+    font-size: 12px;
+    display: none;
+}
+
+.setdiv h6 {
+    font-size: 15px;
+    margin: auto;
+    color: #555;
+    font-weight: 500;
+    float: left;
+} 
+.setdiv label {
+    position: relative;
+    float: right;
+    top: -2px;
+}
+.setdiv i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.setdiv span {
+    position: relative;
+    float: right;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    font-size: 14px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.setdiv span:hover {
+    background: var(--color);
+    color: white;
+}
+.poweroff {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.poweroff:hover {
+    background: #f1f1f1;
+}
+.closedapp {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}    
+.closedapp:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+}
+.closedapp img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
+/* iOS Style Button */
+.form-switch{display:inline-block;cursor:pointer;-webkit-tap-highlight-color:transparent}.form-switch i{position:relative;display:inline-block;margin-right:.5rem;width:46px;height:26px;background-color:#e6e6e6;border-radius:23px;vertical-align:text-bottom;transition:all .3s linear}.form-switch i::before{content:"";position:absolute;left:0;width:42px;height:22px;background-color:#fff;border-radius:11px;transform:translate3d(2px,2px,0) scale3d(1,1,1);transition:all .25s linear}.form-switch i::after{content:"";position:absolute;left:0;width:22px;height:22px;background-color:#fff;border-radius:11px;box-shadow:0 2px 2px rgba(0,0,0,.24);transform:translate3d(2px,2px,0);transition:all .2s ease-in-out}
+.form-switch:active i::after{width:28px;transform:translate3d(2px,2px,0)}.form-switch:active input:checked+i::after{transform:translate3d(16px,2px,0)}.form-switch input{display:none}.form-switch input:checked+i{background-color:var(--color)}.form-switch input:checked+i::before{transform:translate3d(18px,2px,0) scale3d(0,0,0)}.form-switch input:checked+i::after{transform:translate3d(22px,2px,0)}
+
+
+
+
+
+
+
+
+/* Container Styles */
+.container {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    padding: 20px 10px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.typebox {
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    bottom: 0;
+    padding: 20px;
+    background: #fafafa;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    overflow: scroll;
+    transition: all 0.3s;
+}
+.closetypebox {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    font-size: 20px;
+    color: #aaa;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+}     
+.tools {
+    position: relative;
+    top: 6px;
+    width: 140px;
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}  
+.toolsbox {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    font-size: 20px;
+    color: var(--color);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.toolsbox i {
+    padding: 10px;
+}
+.mobtoolsdiv {
+    display: none;
+}
+#getval {
+    visibility: hidden;
+    display: none;
+} 
+.custom-file-upload {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+}
+.clock {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.clockcont {
+    position: relative;
+    float: right;
+    width: 100%;
+}
+.clockcont img {
+    float: right;
+} 
+.upimgright {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.clockleft {
+    float: left;
+}
+.upimgleft {
+    position: relative;
+    float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}  
+.clockleft img {
+    float: left;
+} 
+ 
+.messengerbox {
+    width: 450px;
+    float: left;
+    transition: all 0.3s;
+}  
+.messenger {
+    position: relative;
+    border: none;
+    float: left;
+    background: #f1f1f1;
+    padding: 15px 20px;
+    height: 50px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 40px;
+    color: #555;
+    font-size: 15px;
+    transition: all 0.4s;
+    resize: none;
+}
+.messenger:focus, .messenger:hover {
+    background: #eaeaea;
+}
+.messenger::placeholder {
+    color: #777;
+}
+.sendbtn {
+    position: relative;
+    float: left;
+    padding: 10px;
+    font-size: 23px;
+    color: var(--color);
+    top: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+.sendbtn:hover {
+    background: #f1f1f1;
+}
+.bonusicon, .bonusdiv .sendbonus {
+    position: relative;
+    transform: scale(1);
+    top: 1px;
+    float: right;
+    color: var(--color);
+    font-size: 29px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 100%;
+} 
+.bonusicon:active {
+    transform: scale(2);
+    transition: all 2s;
+}
+.contgen .bonusicon {
+    font-size: 40px;
+}
+.bonusdiv {
+    position: relative;
+    float: right;
+    width: 100%;
+} 
+.bonusdiv img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    top: 5px;
+    float: right;
+}
+.sendbonus {
+    position: relative;
+    top: -3px;
+}
+.chattools {
+    position: absolute;
+    top: 0px;
+    height: 60px;
+    width: 100%;
+    background: #fafafa;
+    z-index: 200;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f1f1f1;
+} 
+.chatback h6, .topbar h6 {
+    float: left;
+    font-size: 15px;
+    color: var(--color);
+    margin: auto;
+    padding: 13px 5px;
+}
+.chatback {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    top: -2px;
+}
+.chatback:hover {
+    opacity: 0.8;
+} 
+.backchats {
+    top: 0;
+    font-size: 25px;
+    padding: 10px;
+    color: var(--color);
+    float: left;
+}
+.contactback {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+} 
+.contactback:hover {
+    opacity: 0.8;
+}
+.contchatname {
+    float: right;
+    margin: auto;
+    margin-right: 20px;
+    margin-top: 11px;
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+}
+.chatnameinfo {
+    margin-right: 5px;
+    float: left;
+    font-size: 25px;
+    top: -7px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.chatinfo {
+    position: absolute;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: #fafafa;
+    z-index: 100;
+    padding: 20px;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    overflow-y: scroll;
+}
+.chatinfo h4 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.chatinfodiv {
+    position: relative;
+    width: 90%;
+    margin: 40px auto;
+}
+.chatinfodiv h6 {
+    text-align: left;
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 500;
+    margin: 20px auto;
+} 
+.chatinfodiv p {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin: 25px auto;
+}
+.chatinfodiv p i {
+    color: #555;
+    font-size: 16px;
+    margin-right: 15px;
+}
+.chatinfocall {
+    position: relative;
+    text-align: center;
+}
+.chatinfocall i {
+    display: inline-block;
+    margin: auto 10px;
+    padding: 10px;
+    border-radius: 100%;
+    background: #eaeaea;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.chatinfocall i:hover {
+    background: #e1e1e1;
+}
+.chatinfo .profpic {
+    cursor: default;
+}
+.personaltheme {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.tempcont {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 45px;
+}
+.tempcont img {
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.tempcont h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px auto;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.tempcont h6 {
+    margin-top: 0px;
+    color: #777;
+    font-weight: 500;
+}
+
+.msg {
+    position: relative;
+    max-width: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px auto;
+    transition: all 0.4s;
+}
+.msg p {
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 15px;
+    border-radius: 50px;
+}
+.msgright {
+    float: right;
+    transition: all 0.4s;
+}
+.msgleft {
+    float: left;
+}
+.msgright p {
+    background: var(--color);
+    color: white;
+    margin-right: 40px;
+}
+.msgleft p {
+    background: #eeeeee;
+    margin-left: 40px;
+    color: black;
+}
+
+.msg > img  {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    padding: 5px;
+    top: 5px;
+}
+.msgright > img  {
+    float: right;
+}
+.msgleft > img  {
+    float: left;
+}
+
+
+
+/* Apps Window */
+.appwindow {
+    position: relative;
+    height: 100%;
+}
+.homeapp {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+}
+.appbox {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    box-shadow: var(--shadow);
+    background: #f1f1f1;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.appbox:hover {
+    background: #eaeaea;
+}
+.appbox img {
+    width: 80px;
+}
+.appbox h4 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+}
+.messengerapp {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    padding: 40px 20px 100px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+    z-index: 950;
+}
+.topbar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.topbar img {
+    position: relative;
+    top: 3px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+} 
+.topbar h4 {
+    margin: auto;
+    float: left;
+    margin-left: 0px;
+    font-size: 22px;
+    color: #555;
+    top: 7px;
+    font-weight: 400;
+}
+.contactdiv {
+    position: relative;
+    margin-top: 70px;
+    height: 93%;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.contactbox {
+    position: relative;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.contactbox:hover {
+    background: #f6f6f6;
+}
+.contactbox img {
+    position: relative;
+    width: 45px;
+    float: left;
+    border-radius: 100%;
+    top: -3px;
+} 
+.contactbox h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: auto;
+    float: left;
+    margin-left: 20px;
+    top: 0px;
+}  
+.contactbox i {
+    position: absolute;
+    top: 38%;
+    right: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.contactbox i:hover {
+    color: var(--color);
+}
+.contactbox p {
+    text-align: left;
+    margin: auto;
+    margin-top: 25px;
+    left: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa;
+    width: 80%;
+    margin-left: 45px;
+}
+#contactsearch {
+    position: relative;
+    float: right;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 50px;
+    background: #f1f1f1;
+    top: -3px;
+    width: 200px;
+    transition: all 0.3s;
+}
+#contactsearch:hover {
+    background: #eaeaea;
+}
+#contactsearch:focus {
+    width: 240px; 
+    background: #eaeaea;
+}
+    
+.chatapp {
+    position: relative;
+    height: 95%;
+    width: 100%;
+    display: none;
+    animation: AnimationName 20s ease infinite;
+}  
+.fa-check {
+    color: lawngreen;
+    margin-left: 5px;
+}
+.dlchat a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.dlchat:hover a {
+    color: white;
+}
+
+/* Quadflow App */
+.quadflowapp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    text-align: center;
+    background: #fafafa;
+}  
+.quadflowapp iframe {
+    position: relative;
+    width: 100%;
+    height: 93%;
+    margin: auto;
+} 
+  
+/*Secret API */
+.secretapi {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 997;
+    text-align: center;
+    overflow:hidden;
+}
+.secretapi h2 {
+    font-size: 25px;
+    color: #aaa;
+    font-weight: 500;
+    margin-top: 60px;
+} 
+.scifi {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+    top: 0px;
+    bottom: 0px;
+    animation: secretfade 5s ease infinite, secretspin 20s linear infinite;
+    transition: all 0.3s;
+} 
+@keyframes secretfade {
+    0%{opacity: 0.2;}
+    50%{opacity: 0.6;}
+    100%{opacity: 0.2;}
+}
+@keyframes secretspin {
+    from{transform: rotate(0deg);filter: grayscale(100%)}
+    to{transform: rotate(360deg);filter: grayscale(80%)}
+}
+#fireflies {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.secretcont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    top: -30px;
+    opacity: 0;
+    transition: all 0.8s;
+    padding-bottom: 200px;
+} 
+.secretcont h4 {
+    font-size: 25px;
+    color: #aaa;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.secretcont h4 i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}  
+.secretcont a {
+    color: #aaa;
+}
+.secretcontbtn {
+    color: #000!important;
+    font-weight: 400;
+    padding: 10px;
+    background: #ccc;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.secretcontbtn:hover {
+    text-decoration: none;
+    background: #bbb;
+}
+.sbtn2 {
+    top: 30px;
+}
+.secretcont small {
+    color: #777;
+    line-height: 1.7;
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+.secretcont h6 {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.secretcont p {
+    margin: auto;
+    color: #aaa;
+}
+.devimg {
+    position: relative;
+    margin-top: 10px;
+    width: 30px;
+    opacity: 0.5
+}
+.credits img {
+    position: relative;
+    width: 20px;
+    filter: grayscale();
+    margin-bottom: 5px;
+}
+.credits small {
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+
+
+/*Notifications*/ 
+.notifdiv {
+    position: absolute;
+    top: -140px;
+    left: 0px;
+    height: 120px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.11);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.4s;
+    z-index: 1000;
+    overflow: hidden;
+} 
+.constnotif {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7px;
+}
+.constnotif img {
+    position: relative;
+    width: 20px;
+    top: 5px;
+    margin-right: 10px;
+}
+.constnotif h6 {
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+    color: #aaa;
+    margin-top: -5px;
+    color: var(--color);
+}
+.notifs {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 70%;
+    overflow-y: scroll;
+    margin: auto;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 400;
+    box-sizing: border-box;
+    line-height: 1.5;
+} 
+.notifs p {
+    position: relative;
+    padding: 20px 0px;
+    width: 60%;
+    left: 0px;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin: auto;
+    cursor: pointer;
+} 
+.notifs p:hover {
+    background: #fafafa;
+}
+.notifinject small {
+    display: block;
+    top: 10px;
+    color: #ccc;
+}    
+.notifinject i {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    font-size: 17px;
+    color: #ccc;
+    font-style: normal;
+    padding: 5px;
+    z-index: 100;
+    transition: all 0.2s;
+} 
+.notifinject .fa-times {
+    opacity: 0;
+}
+.notifinject p:hover .fa-times {
+    opacity: 1;
+}
+.closenotif {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    width: 50px;
+    height: 120px;
+    background: #f1f1f1;
+    opacity: 0.5;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.closenotif i {
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    right: 0px;
+    top: 40%;
+    margin: auto;
+    color: #aaa;
+    transition: all 0.3s;
+}
+.notifdiv:hover .closenotif {
+    opacity: 1;
+    color: white;
+}
+.closenotif:hover i {
+    color: #333;
+}
+.notifaudio {
+    display: none;
+}
+.clearallnotifs {
+    position: absolute;
+    font-size: 12px;
+    left: 20px;
+    top: 20px;
+    color: #aaa;
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 100;
+    padding: 10px;
+}
+.clearallnotif:hover {
+    color: #555;
+}
+.notifdash {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 24%;
+    width: 100%;
+    box-shadow: 0px -5px 7px -6px rgba(0,0,0,0.14);
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fcfcfc;
+    display: none;
+    text-align: center;
+} 
+.notifdate {
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+.notifdate span {
+    position: relative;
+    font-size: 23px;
+    padding-bottom: 5px;
+    display: block;
+} 
+.notifclock {
+    position: relative;
+    margin: 20px auto;
+    color: #555;
+    text-align: center;
+}
+.notifdash .digital-clock {
+    color: var(--color);
+}
+.notifdash hr {
+    border: none;
+    width: 100px;
+    margin: auto;
+    height: 1px;
+    background: #eaeaea;
+    margin-bottom: 10px;
+}
+.notiftimecont {
+    position: relative;
+    float: left;
+    width: 48%;
+}
+
+.todos {
+    position: relative;
+}
+.todos p, .alarms p {
+    font-size: 13px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    padding-right: 20px;
+    color: #777;
+    text-align: left;
+}
+.todocalen {
+    margin-right: 10px;
+    font-size: 16px;
+    color: var(--color);
+} 
+.todoclear, .alarmclear {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    color: #aaa;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.utilities {
+    position: relative;
+    margin: auto;
+    padding: 10px 0px;
+    height: 90%;
+    width: 48%;
+    float: right;
+    overflow-y: scroll;
+}
+.utilities h6 {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.alarms {
+    position: relative;
+    text-align: center;
+}
+.alarmicon, .ringing {
+    margin-right: 10px;
+    font-size: 21px!important;
+    position: relative;
+    float: left;
+    top: -3px;
+} 
+.ringing {
+    animation: vibrate-3 0.5s linear infinite both;
+    right: 0;
+    left: auto!important;
+    text-align: left;
+    z-index: -1;
+}
+@keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}10%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}30%{-webkit-transform:translate(-1px,1px);transform:translate(-1px,1px)}40%{-webkit-transform:translate(1px,1px);transform:translate(1px,1px)}50%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}60%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}70%{-webkit-transform:translate(-1px,1px);transform:translate(-1px,1px)}80%{-webkit-transform:translate(-1px,-1px);transform:translate(-1px,-1px)}90%{-webkit-transform:translate(1px,-1px);transform:translate(1px,-1px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+  
+.setalarm, .oldalarm {
+    position: relative;
+    margin: auto;
+    margin-left: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--color);
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 12px!important;
+    font-style: normal;
+}
+.oldalarm {
+    color: #333;
+}
+.dismiss {
+    font-size: 12px;
+    display: block;
+    color: var(--color);
+    cursor: pointer;
+}
+audio {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 20px;
+    outline: none;
+} 
+
+/*Contextmenu CSS */
+.contextmenu {
+    position: fixed;
+    display: none;
+    width: 200px;
+    z-index: 9999;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15); 
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.contextmenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+.contextmenu li {
+    position: relative;
+    padding: 10px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.contextmenu li:hover {
+    background: #f1f1f1;
+}
+
+/*Timepicker CSS */
+.timepicker {
+    padding: 8px 20px;
+    background: #fafafa;
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+/*Emojis CSS */
+.emojidiv, .suggestdiv {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+} 
+.emojidiv i {
+    top: auto!important;
+    margin: 5px;
+    padding: 5px;
+    font-size: 23px;
+    cursor: pointer;
+} 
+.suggestdiv p {
+    font-size: 13px;
+    padding: 7px 10px;
+    background: #eaeaea;
+    margin: 10px;
+    border-radius: 20px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.3s;
+} 
+.suggestdiv p:hover {
+    background: var(--color);
+    color: white;
+}
+.suggestdiv h6, .emojidiv h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin: 20px auto;
+}
+.msg small {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+} 
+.msgright small {
+    float: right;
+    margin-right: 60px;
+}
+.msgleft small {
+    float: left;
+    margin-left: 50px;
+}
+.messenger i {
+    font-size: 50px;
+    display: block;
+}
+.msg p i {
+    font-size: 24px;
+    margin: auto 5px;
+}
+.bonusdiv small {
+    float: right;
+    font-size: 12px;
+    margin-top: 60px;
+    left: 50px;
+    color: #aaa;
+} 
+.soundcloud {
+    border-radius: 10px;
+    width: 80%;
+    height: 150px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.soundcloudinfo {
+    position: relative;
+    margin-left: 40px;
+}
+.offanimation {
+    animation: power 10s infinite linear;
+}
+@keyframes power {
+    0%{transform: scale(1) rotate(0)}
+    50%{transform: scale(1.2) rotate(180deg)}
+    100%{transform: scale(1) rotate(360deg)}
+}
+
+
+/** Startify App **/
+.startify {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    display: none;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+.startifygrad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(105,5,255,1) 0%, rgba(189,0,251,1) 100%);
+    z-index: 100;
+}
+.startifygrad span {
+    float: left;
+    margin-left: 15px;
+    font-size: 17px;
+    color: #f1f1f1;
+    top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.startifygrad span:hover {
+    filter: brightness(120%);
+} 
+.startifygrad i {
+    font-size: 25px;
+    margin-right: 10px;
+    top: 3px;
+}
+.heyoctacore {
+    position: absolute;
+    bottom: 70px;
+    z-index: 900;
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    background: #f9f9f9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+    overflow: hidden;
+    text-align: center;
+}
+.heyoctacore:hover {
+    background: var(--color);
+}
+.heyoctacore h5 {
+    font-size: 20px;
+    top: -2px;
+    padding: 0 20px;
+    font-weight: 500;
+    color: var(--color);
+    margin: auto;
+    user-select: none;
+    transition: all 0.3s;
+} 
+.heyoctacore:hover h5 {
+    color: #f1f1f1;
+}
+.heylogo {
+    position: relative;
+    top: 7px;
+    width: 30px;
+    margin-right: 10px;
+    z-index: -1;
+}  
+.heyoctacore h4 {
+    clear: both;
+    font-size: 28px;
+    color: #555;
+    margin: auto;
+    padding: 15px 20px;
+    cursor: auto;
+}
+.heyoctacore h4 span {
+    font-size: 17px;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.heymsg {
+    display: none;
+    height: 100%;
+    text-align: left;
+} 
+.heymsg i {
+    font-style: normal;
+}
+.swipecont {
+    position: relative;
+    top: -5px;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+}
+.swipecont img {
+    margin: 10px auto;
+    height: 250px;
+    width: 90%!important;
+    border-radius: 20px;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+}
+.slick-slide {
+    position: relative;
+    border: none;
+    outline: none;
+    margin: auto;
+    top: 0px;
+    cursor: grab;
+} 
+.heytitle {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
+}   
+.heytitle h6 {
+    position: relative;
+    font-size: 21px;
+    color: var(--color);
+    font-weight: 500;
+}    
+.startifyanimate {
+    animation: flow 4s ease infinite;
+    background: linear-gradient(90deg, #9700fb, #6905ff);
+    background-size: 400% 100%;
+} 
+@keyframes flow {
+    0%{background-position:0% 150%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}   
+.closehey {
+    position: absolute;
+    font-size: 25px;
+    padding: 10px;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+    color: #777;
+}  
+.startifycont {
+    position: relative;
+    height: 85%;
+    width: 100%;
+    margin-top: 50px;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+}  
+.startify h3 {
+    font-size: 25px;
+    color: #777;
+    font-weight: 500;
+    margin: 20px auto;
+    float: left;
+    margin-top: 0;
+}  
+.addrectitle {
+    float: right;
+    margin-top: -1px;
+    font-size: 16px;
+    color: #777;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 7px 12px;
+    transition: all 0.3s;
+}   
+.addrectitle:hover {
+    background: var(--color);
+    color: #fff;
+}
+.addrectitle i {
+    margin-right: 5px;
+} 
+.recommendscont > div {
+    display: block;
+    width: 100%;
+}
+.recommendscont h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color);
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+.recommendscont img {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+} 
+.recommendscont h5 {
+    margin: auto;
+    color: #aaa;
+    margin-left: 30px;
+} 
+.heyloader {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}  
+.heyloader h6 {
+    font-size: 15px;
+    margin: 20px auto;
+    text-align: center;
+    color: #aaa;
+}    
+ 
+/*Loader*/ 
+.lds-default{display:inline-block;position:relative;margin-top:40px; width:80px;height:80px}.lds-default div{position:absolute;width:6px;height:6px;background:var(--color);border-radius:50%;animation:lds-default 1.2s linear infinite}.lds-default div:nth-child(1){animation-delay:0s;top:37px;left:66px}.lds-default div:nth-child(2){animation-delay:-.1s;top:22px;left:62px}.lds-default div:nth-child(3){animation-delay:-.2s;top:11px;left:52px}.lds-default div:nth-child(4){animation-delay:-.3s;top:7px;left:37px}.lds-default div:nth-child(5){animation-delay:-.4s;top:11px;left:22px}.lds-default div:nth-child(6){animation-delay:-.5s;top:22px;left:11px}.lds-default div:nth-child(7){animation-delay:-.6s;top:37px;left:7px}.lds-default div:nth-child(8){animation-delay:-.7s;top:52px;left:11px}.lds-default div:nth-child(9){animation-delay:-.8s;top:62px;left:22px}.lds-default div:nth-child(10){animation-delay:-.9s;top:66px;left:37px}.lds-default div:nth-child(11){animation-delay:-1s;top:62px;left:52px}.lds-default div:nth-child(12){animation-delay:-1.1s;top:52px;left:62px}@keyframes lds-default{0%,100%,20%,80%{transform:scale(1)}50%{transform:scale(1.5)}}
+
+
+.addreccont {
+    position: absolute;
+    bottom: -55%;
+    z-index: 910;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px -19px 37px -17px rgba(0,0,0,0.55);
+    background: #f9f9f9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    overflow-y: scroll;
+    text-align: center;
+}  
+.closeaddrec {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    font-size: 25px;
+    color: #aaa;
+    padding: 5px;
+    cursor: pointer;
+}
+.addreccont h5 {
+    float: left;
+    font-size: 19px;
+    color: #aaa;
+    margin: 10px auto;
+    font-weight: 500;
+}
+.addpreview {
+    position: relative;
+    margin: auto;
+    margin-top: 80px;
+    width: 200px;
+    height: 100px;
+    border: 2px solid var(--color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.addpreview i {
+    font-size: 23px;
+    color: var(--color);
+    top: 38px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    z-index: 10;
+    opacity: 0.4;
+}
+.addreccont h6 {
+    margin: 10px auto 10px auto;
+    font-size: 14px;
+    color: var(--color);
+    font-weight: 500;
+    width: 200px;
+    padding: 10px;
+    outline: none;
+}
+.addreccont h6::selection {
+    background: var(--color);
+    color: #fff;
+} 
+.addpreview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.addpreview:hover img {
+    filter: brightness(60%);
+}
+.addpreview label {
+    position: relative;
+    z-index: 10;
+}
+.addpreview label:hover i,  .addpreview:hover i {
+    opacity: 1;
+}
+.addpreview input {
+    display: none;
+}
+.addrectxt {
+    border: none;
+    background: none;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+.addreccont small {
+    padding: 8px 15px;
+    transition: all 0.3s;
+    color: #777;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.addreccont small:hover {
+    background: var(--color);
+    color: #fff;
+}  
+.addreccont select {
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    min-width: 200px;
+    padding-left: 10px;
+}
+.recspage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: -40px;
+    display: none;
+}
+.recspage img {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    border-radius: 10px;
+}  
+.recspage h4 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 23px;
+    color: #aaa;
+    float: left;
+    font-weight: 500;
+}
+.recscontent {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 55%;
+    clear: both;
+    overflow-y: scroll;
+}
+.recscontent h5 {
+    color: var(--color);
+    font-size: 20px;
+}
+.vacacontent > div {
+    position: relative;
+    margin: 15px auto;
+    width: 95%;
+    display: inline-table;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.vacacontent .spacerl {
+    visibility: hidden;
+}
+.vacacontent img {
+    float: left;
+    width: 30%;
+    height: 200px;
+    border-radius: 0;
+    margin: 0;
+    cursor: pointer;
+} 
+.vacatxtcont {
+    position: relative;
+    float: right;
+    padding: 20px 15px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    width: 70%;
+}
+.vacacontent h4 {
+    font-size: 18px;
+    float: left;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--color);
+}  
+.vacacontent h4 span {
+    font-weight: 400;
+}
+.vacacontent h6 {
+    margin: 10px;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+} 
+.vacacontent h6 i {
+    padding: 0;
+    border-radius: 100%;
+    background: var(--color);
+    color: #fff;
+    font-size: 15px;
+    margin-right: 10px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-block;
+}
+.recsgenbtn {
+    clear: both;
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--color);
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+} 
+.recsgenbtn:hover {
+    filter: brightness(110%);
+}
+.gsc-control-cse {
+    position: relative;
+    top: 0px;
+    background: #fafafa!important;
+    border: none!important;
+}
+.gsc-control-cse button {
+    background: var(--color)!important;
+    border: none;
+    cursor: pointer;
+    min-height: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.gsc-control-cse button:hover {
+    filter: brightness(110%);
+    background: var(--color);
+} 
+.gsc-control-cse input {
+    min-height: 40px;
+    box-sizing: border-box;
+} 
+  
+/*Start my Day*/
+.startdaybtn {
+    padding: 20px 30px;
+    clear: both;
+    display: block;
+    background: linear-gradient(135deg, rgba(105,5,255,1) 0%, rgba(189,0,251,1) 100%);
+    font-size: 18px;
+    color: #fff;
+}
+.startdaybtn:hover {
+    animation: shine 3s linear infinite;
+}
+.startdaybtn:hover i {
+    margin-right: 15px;
+}
+.startdaybtn i {
+    margin-right: 10px;
+    transition: all 0.4s;
+}
+@keyframes shine {
+    0%{filter: brightness(100%)}
+    25%{filter: brightness(120%)}
+    50%{filter: brightness(100%)}
+    75%{filter: brightness(120%)}
+    100%{filter: brightness(100%)}
+}
+.startdaytitle {
+    height: 30px;
+    transition: all 0.3s;
+}
+.startday {
+    position: absolute;
+    left: 0;
+    bottom: -100vh;
+    height: 75%;
+    width: 100%;
+    box-shadow: 0px -19px 37px -17px rgba(0,0,0,0.15);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #fafafa;
+    z-index: 920;
+    transition: all 0.4s;
+}
+.startdaynav {
+    position: relative;
+    transition: all 0.3s;
+}   
+.startday h4 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--color);
+    font-weight: 500;
+    margin: auto;
+    margin-top: 10px;
+} 
+.closestartday {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    padding: 5px;
+    font-size: 25px;
+    color: var(--color);
+    cursor: pointer;
+}
+.startgreet {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.startday h6 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.startgreet i {
+    font-style: normal;
+}
+.startgreet span {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 400;
+} 
+.chooseday {
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+.chooseday div {
+    position: relative;
+    height: 140px;
+    margin: auto 10px;
+}
+.chooseday img {
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+}
+.chooseday h5 {
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    color: #aaa;
+    font-weight: 400;
+}
+.startdaygen {
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+}  
+.startdaygen iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1220px) {
+    .grid {
+        width: 100%;
+    }
+}
+@media (max-width:720px) {
+    .app {
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+    .typebox {
+        margin-bottom: 20px;
+    }
+    .typebox .fa-dragon {
+        top: auto;
+    }
+    .typebox i:not(.bonusicon):active {
+        transform: scale(1.2);
+    }
+    .messengerbox {
+        width: 90%;
+    }
+    .toolsbox {
+        margin: auto;
+        padding: 10px;
+        border-radius: 100%;
+        display: none;
+    }
+    .toolsbox i {
+        background: none;
+    }
+    .mobtoolsdiv {
+        position: relative;
+        display: block;
+        top: -25px;
+        width: 300px;
+        height: 20px;
+    }
+    .mobtoolsbtn {
+        position: relative;
+        font-size: 30px;
+        color: var(--color);
+        padding: 10px;
+        cursor: pointer;
+        float: left;
+        transition: all 0.3s;
+    }
+    .mobtools {
+        position: relative;
+        float: left;
+        left: -20px;
+        top: 11px;
+        display: none;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .mobtools i {
+        float: left;
+        font-size: 20px;
+        color: var(--color);
+        padding: 5px 10px;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .container {
+    	padding-bottom: 60px;
+        height: 81%;
+    }
+    .colors {
+        height: auto;
+        margin-bottom: 60px;
+        overflow-y: scroll;
+    }
+    .applygrad {
+        float: none;
+        display: block;
+        margin-top: 20px;
+        width: 100px;
+    }
+    .colors div {
+        margin-bottom: 10px!important;
+    }
+    .inneroptclick div {
+        margin-bottom: 60px;
+    }
+    .profileinfo {
+        padding-bottom: 20px;
+    }
+    .inneroptclick  h6 {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .profileinfo input, .weathersettings input {
+        width: 100%;
+        float: none;
+    }
+    .weathersettings div:nth-of-type(2) {
+        display: none;
+    }
+    .weathersettings label {
+        float: none;
+    }
+    .closetypebox {
+        top: 100px;
+    }
+    
+    
+}  
+
+@media (max-width:600px) {
+    .vacacontent > div img {
+        width: 100%;
+        height: 100px;
+        float: none;
+    }
+    .vacatxtcont {
+        width: 100%;
+        float: none;
+        padding-bottom: 80px;
+    }
+    .startdaybtn:hover i {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:550px) {
+    .messengerbox {
+        width: 95%;
+        float: none;
+        margin-top: 50px;
+    }
+    .messenger {
+        width: 80%;
+    }
+    #contactsearch {
+        width: 120px;
+    }
+    #contactsearch:focus {
+        width: 150px;
+    }
+    .typebox {
+        height: 150px;
+    }
+    .chatimguploader {
+        position: relative;
+        float: left;
+    }
+    .tools {
+        margin-top: 10px;
+    }
+    
+}
+ 
+@media (max-width:500px) {
+    .admininput {
+        display: block;
+        width: 85%;
+        margin: 20px 0;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:450px) {
+    nav .digital-clock {
+        display: none;
+    }
+    .messengerbox {
+        width: 85%;
+    }
+    nav h4 {
+        text-align: left;
+        margin-left: 80px;
+    }
+}
+
+@media (max-width:370px) {
+    .setdiv {
+        padding: 10px 20px;
+    }
+    .setdiv label {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .btnsetdivs {
+        padding: 20px;
+    }
+    
+    
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
