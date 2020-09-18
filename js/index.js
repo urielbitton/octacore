@@ -1,6 +1,4 @@
-//List of bugs:
-//1. weather causes reloading issues - file not found
-//2. find a way to turn off darkmode when it turns on automatically at night
+
  
 $(document).ready(function() { 
       
